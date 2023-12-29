@@ -27,7 +27,7 @@ namespace purrpurrPlugin
         bool IsCombinedKitchen { get; set; } = false;
         bool IsLoggia { get; set; } = false;
         int HouseClass { get; set; }
-        PluginEngine Engine;
+        Start.PluginEngine Engine;
         private static Dictionary<string, int> Mapping { get; } = new Dictionary<string, int>()
         {
             { "Эконом", 0 },
@@ -86,7 +86,7 @@ namespace purrpurrPlugin
 
         private void ButtonClickSave(object sender, RoutedEventArgs e) // Кнопка "Сохранить"
         {
-            Engine = new PluginEngine(RoomCount, IsSeparateBathrooms, IsWardrobe, IsCombinedKitchen, IsLoggia, HouseClass);
+            Engine = new Start.PluginEngine(RoomCount, IsSeparateBathrooms, IsWardrobe, IsCombinedKitchen, IsLoggia, HouseClass);
         }
 
         private void ButtonClickGeneration(object sender, RoutedEventArgs e) // Кнопка "Генерация"
